@@ -1,7 +1,7 @@
 'use strict';
 
 var chai = require('chai');
-var chaiAsPromised = require("chai-as-promised");
+var chaiAsPromised = require('chai-as-promised');
 var expect = require('chai').expect;
 
 var bookshelf = require('bookshelf');
@@ -11,10 +11,10 @@ chai.use(chaiAsPromised);
 
 describe('bookshelf transaction manager', function() {
   before(function() {
-    this.knex = require('knex')({
+    this.knex = knex({
       client: 'sqlite3', connection: { filename: ':memory:'}
     });
-    this.bookshelf = require('bookshelf')(this.knex);
+    this.bookshelf = bookshelf(this.knex);
     this.bookshelf.plugin(require('../'));
   });
 
@@ -41,12 +41,13 @@ describe('bookshelf transaction manager', function() {
   });
 
   it('should work normal on non duplicates', function() {
-    expect(this.User.forge({name:'user'}).save()).to.be.eventually.fulfilled;
+    return expect(this.User.forge({name:'user'}).save())
+      .to.be.eventually.fulfilled;
   });
 
   it('should throw error on duplicate', function() {
-    expect(this.User.forge({name:'admin'}).save())
-      .to.eventually.throw(
+    return expect(this.User.forge({name:'admin'}).save())
+      .to.eventually.be.rejectedWith(
         this.bookshelf.Model.DuplicateError,
         'DuplicateError: name'
       );
