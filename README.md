@@ -37,4 +37,4 @@ saved model with same value of speciffied fields, and if there is
 
 ## Author
 
-[offlinehacker](mailto:jakahudoklin@gmail.com)
+[offlinehacker](https://github.com/offlinehacker)
