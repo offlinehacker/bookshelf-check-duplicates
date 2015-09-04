@@ -15,16 +15,17 @@ Then in your bookshelf configuration:
 
 Define bookshelf model with additional attributes
 
-  var User = bookshelf.Model.extend({
-    tableName: 'users',
-    duplicates: ['name']
-  });
 
-  User.forge({name: 'admin'}).save().then(function(admin) {
-    User.forge({name: 'user'}).save().catch(function(err) {
-      assert(err instanceof bookshelf.Model.DuplicateError);
+    var User = bookshelf.Model.extend({
+      tableName: 'users',
+      duplicates: ['name']
     });
-  });
+
+    User.forge({name: 'admin'}).save().then(function(admin) {
+      User.forge({name: 'user'}).save().catch(function(err) {
+        assert(err instanceof bookshelf.Model.DuplicateError);
+      });
+    });
 
 Whenever model is saved `validateDuplicates` will check if there's already a
 saved model with same value of speciffied fields, and if there is
