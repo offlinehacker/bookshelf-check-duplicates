@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-check-duplicates",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Bookshelf plugin that checks if there's a duplicate in a database",
   "main": "index.js",
   "directories": {
