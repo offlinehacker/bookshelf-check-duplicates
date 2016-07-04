@@ -4,7 +4,7 @@ var Promise = require('bluebird');
 var _ = require('lodash');
 
 function DuplicateError(field) {
-    this.name = 'DupplicateError';
+    this.name = 'DuplicateError';
     this.message = 'DuplicateError: ' + field;
     this.field = field;
 }
