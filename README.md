@@ -28,7 +28,7 @@ Define bookshelf model with additional attributes
     });
 
 Whenever model is saved `validateDuplicates` will check if there's already a
-saved model with same value of speciffied fields, and if there is
+saved model with same value of specified fields, and if there is
 `bookshelf.Model.DuplicateError` error will be thrown.
 
 ## License
