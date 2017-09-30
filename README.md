@@ -1,5 +1,7 @@
 # Bookshelf check duplicates
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/offlinehacker/bookshelf-check-duplicates.svg)](https://greenkeeper.io/)
+
 Bookshelf plugin that checks for duplicates in a database.
 
 ## Installation
