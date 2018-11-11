@@ -8,7 +8,7 @@ function DuplicateError(field) {
     this.message = 'DuplicateError: ' + field;
     this.field = field;
 }
-DuplicateError.prototype = Error.prototype;
+DuplicateError.prototype = Object.create(Error.prototype);
 
 module.exports = function (bookshelf) {
   var Model = bookshelf.Model;
