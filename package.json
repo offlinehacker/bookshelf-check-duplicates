@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-check-duplicates",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Bookshelf plugin that checks if there's a duplicate in a database",
   "main": "index.js",
   "directories": {
@@ -19,6 +19,7 @@
     "duplicates"
   ],
   "author": "Jaka Hudoklin",
+  "contributors": ["cumul <gg6123@naver.com>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GateHubNet/bookshelf-check-duplicates/issues"
